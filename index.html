@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html>
-
-<head>
-<title>YAY!</title>
-</head>
-
 <body>
 
-<h1>Welcome to the Page!</h1>
-<p>heck yeah</p>
+<h1>My First JavaScript</h1>
 
-<h2>Water usage</h2>
-<p><i>Shower</i> - 8 gallons</p>
+<p>JavaScript can change the content of an HTML element:</p>
 
-<h2>Links</h2>
-<p>Here is a link resources: <a href="http://www.wikihow.com">https://www.epa.gov/watersense/how-we-use-water#:~:text=%20Water%20in%20Daily%20Life%20%201%20The,higher%20in%20drier%20parts%20of%20the...%20More%20</a></p>
+<button type="button" onclick="myFunction()">Click Me!</button>
+
+<p id="demo">This is a demonstration.</p>
+
+<script>
+function myFunction() { 
+  document.getElementById("demo").innerHTML = "Hello JavaScript!";
+}
+</script>
 
 </body>
 </html>
+
