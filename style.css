@@ -1,6 +1,8 @@
+
 body{
-   background-color: lightblue;
-  /*background-image: url(water.jpg);*/
+   background-color: #ddf6ff;
+  /* background-image: url(water.jpg); */
+  z-index: 1;
 }
 
 h1{
@@ -13,38 +15,108 @@ h1{
 }
 .NormPara {
   font-family: "Times New Roman", Times, serif;
-  font-size: 18px;
+  font-size: 20px;
 }
 .StrongPara {
   font-family: "Times New Roman", Times, serif;
   font-size: 24px;
 }
 .header {
-  padding: 15px;
+  border-radius: 25px;
+  padding: 0px;
   text-align: center;
   background: rgb(93, 156, 238);
   color: white;
-  font-size: 18px;
+  border: 2px solid;
+  box-shadow: 3px 6px #888888;
+  margin-top: 3em;
 }
 .footer {
   position: fixed;
-  height: 30px;
+  height: 40px;
   left: 0;
-  bottom: 0;
+  top: 0;
   width: 100%;
   background-color: red;
   color: white;
   text-align: center;
+
 }
 
 p{
-  padding: 10px;
+  padding: 4px;
+  margin-left: 5px;
+  margin-right: 5px;
+  text-align: center;
 }
+
 .wideButton{
   margin-top: 5px;
-  width: 300px;
+  width: 35em;
   color: darkblue;
   background-color: ghostwhite;
+  box-shadow: 2px 5px #888888;
+  height: 25px;
+  border-radius: 0px;
+}
+
+
+input[type = "button"]:hover {
+    color: rgb(4, 0, 255);
+    background-color: lightgoldenrodyellow;
+    cursor: pointer;
+}
+
+
+input {
+  border-radius: 25px;
+  text-align: center;
+  height: 50px;
+  width: auto;
+  background-color: whitesmoke;
+  border: 1px solid;
+  box-shadow: 4px 7px #888888;
+  margin: 10px;
+  min-width: 150px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+input:active{
+  box-shadow: 1px 2px #888888;
+}
+
+input[type = "image"] {
+    cursor: pointer;
+    min-width: 1px;
+    max-width: 4em;
+    margin: 0.5em;
+    height: auto;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  cursor: text;
+}
+
+.bigButton{
+  height: 30%;
+  min-width: 60%;
+  font-size: 30px;
+	border: 2px solid;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%; 
+  }
+}
+
+.selectButton{
+    color: black;
+    background-color: lightgreen;
+    cursor: pointer;
 }
 
 .center{
@@ -53,4 +125,110 @@ p{
 
 .questionMargin{
   margin: 30px;
+}
+
+.ghost {
+  display: none;
+}
+
+hr{
+  height: 3px;
+  background-color: rgb(84, 84, 85);
+}
+
+.homeimage{
+  border-radius: 25px;
+  height: auto;
+  width: 32%;
+  /* width: 20vw; */
+  margin-left: 10px;
+}
+
+.banner{
+  top: -10px;
+  margin-top: 0px;
+  max-width: 100%;
+  height: auto;
+  position: fixed;
+  z-index: -1;
+}
+
+.colororange{
+  background-color: orange;
+  position: relative;
+  max-height: 100%;
+
+}
+
+#postSubmit
+{
+  text-align: center;
+}
+
+.real{
+  display: inline;
+}
+
+#allQuestions
+{
+  text-align: center;
+}
+
+#stats{
+  border-radius: 25px;
+  text-align: center;
+  background-color: burlywood; 
+  border: 1px solid;
+  box-shadow: 5px 10px #888888;
+}
+
+#announcement
+{
+  border-radius: 25px;
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  border: 1px solid;
+  box-shadow: 5px 10px #888888;
+}
+
+.question{
+  border-radius: 25px;
+  text-align: center;
+  background-color: lightblue; 
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  border: 3px solid;
+  box-shadow: 6px 12px #888888;
+  margin: 40px;
+
+}
+
+.questionAnimation{
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+
+.facts{
+  border-radius: 25px;
+  text-align: center;
+  background-color: lightblue; 
+  font-family: "Times New Roman", Times, serif;
+  font-size: 24px;
+  border: 2px solid;
+  box-shadow: 5px 10px #888888;
+  margin: 40px;
+}
+
+.titleText{
+  font-size: 3em;
+}
+
+.subtitle{
+  font-size: 1.5em;
+}
+
+.borderBig
+{
+  border: 3px solid;
 }
