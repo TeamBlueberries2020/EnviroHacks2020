@@ -2,38 +2,78 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>Water Facts</title>
+	<title>Water Usage Facts</title>
+	<link rel="favicon icon" href="images/favicon.ico" type="image/x-icon">  
 	<link href="style.css" rel="stylesheet" type="text/css" />
 
 </head>
 
 <body>
 	<script src="script.js">
+
 	</script>
 
-  	<div class="header">
-		<h1>Water Usage Facts</h1>
-		<p>Read about water usage, how it relates to climate change, and how you can help conserve water!</p>
+	<div class="header">
+		<h1 class = "titleText">Water Usage Facts</h1>
+		<p class = "subtitle">Read facts and statictics about household water usage, and how you can help conserve water!</p>
 
 		<script src="quiz.js">
 
 		</script>
-
-
 	</div>
-  <div class = "center">
-  <p class = "NormPara">Ishan uses 6 metric tons of water per hour</p>
-  <p class = "NormPara">According to usgs.gov, on average, each person uses about 80-100 gallons of water per day, for indoor home uses.</p>
-  </div>
+
+	<div class="center">
+    <div class = "facts">
+		<p class="NormPara">According to the EPA, in the United States, people use on average 88 gallons of water a day at home,
+			spending about $1000 per year in water costs.</p>
+      <hr>
+		<p class="NormPara">That adds up to around 2700 gallons per month, or more than 32 thousand gallons of water per year per
+			person.
+		</p>
+    <hr>
+		<p class="NormPara">These wasteful water habits could eventually lead to a drought when combined with low percipitation
+			levels, in which you may be fined for wasteful water habits</p>
+      <hr>
+		<p class="NormPara">If you feel like that is a lot of water being wasted and are starting to feel concerned about the environment,
+			we are here to help! Click on the quiz tab to help measure the exact amount of water you use per week. Below are some
+			tips and ways you could save on your usage!</p>
+    </div>
+    <div class = "facts">
+		<p class="NormPara">By replacing old toilets that are not WaterSense labeled models or before 1980, the average family
+			would save around 13,000 gallons of water and $130 dollars per year, so the replacement would pay off quickly.
+		</p>
+    <hr>
+		<p class="NormPara">If you have an old dishwasher that is not energy star rated, switching to a new energy-star rated model
+			would save at least 2 gallons per DAY, which would be 14 gallons per week and 730 gallons per year, not adding the electricity
+			saved as well.</p>
+      <hr>
+		<p class="NormPara">Also, if your dishwasher was made all the way before 1995, you could be wasting 10 gallons of water
+			per day, and that would add up to 3,650 gallons of water per year, so replacing to a new dishwasher that is energy-star
+			rated would save TONS of water and lots of money on your utility bill.</p>
+      <hr>
+		<p class="NormPara">Replacing an old shower head with a newer one would save 2,700 gallons a year, which would bring down
+			your utility bill by around 70 dollars.</p>
+      
+		</div>
+
+    <div class = "facts">
+		<p class="NormPara">Following at least one of these ways to save water, you would drastically decrease your water footprint,
+			save money on your utility bills, help prevent or recover quicker from a drought, and save the environment!</p>
+    </div>
+    </div>
 
 
-  <div class="footer">
-  <input class = "wideButton" type="button" onclick="location.href='index.html';" value="Home"/>
-  
-  </div>
+
+    <div class="footer">
+        <input class="wideButton" type="button" onclick="location.href = 'quiz.html'"
+            value="Start the water footprint calculator!">
+        <input class="wideButton" type="button" onclick="location.href='index.html';" value="Home" />
+
+
+    </div>
 </body>
 
 </html>
