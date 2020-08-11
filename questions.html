@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="favicon icon" href="images/favicon.ico" type="image/x-icon">  
+</head>
+
+<body>
+	<div class="header">
+		<h1 class = "titleText">Water Footprint Calculator</h1>
+		<p class = "subtitle">Answer the questions for an estimate of your water usage!</p>
+
+	</div>
+
+  <br>
+
+
+	<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+	<script src="quiz.js">
+
+	</script>
+
+	<div id="allQuestions">
+		<!-- question 1 -->
+    <div class = "question">
+		<h3>How many people do you live with (including yourself)?</h3>
+		<input type="number" oninput="storeVar(this.value,0);">
+    <br>
+    <br>
+    </div>
+    <div = class = "question">
+
+        <div>
+            <h3>How long do you take your showers?</h3>
+            <input type ="button" id = "0" class="ghost">
+            <input type="button" onclick=" buttonSelected(this.value,1,2,3,4,1);storeVar(this.value, 1,1);" value="5 minutes or less" id = "1">
+            <input type="button" onclick="buttonSelected(this.value,2,1,3,4,1);storeVar(this.value, 1,2);" value="5-10 minutes" id ="2">
+            <input type="button" onclick="buttonSelected(this.value,3,1,2,4,1);storeVar(this.value, 1,3);" value="10-20 minutes!" id ="3">
+            <input type="button" onclick="buttonSelected(this.value,4,2,3,1,1);storeVar(this.value, 1,4);" value="Over 20 minutes" id="4">
+        </div>
+    
+        <div>
+            <h4>How often do you take showers?</h4>
+            <input type="button" onclick="buttonSelected(this.value,5,6,7,0,2);storeVar(this.value, 2);" value="Daily"id="5">
+            <input type="button" onclick="buttonSelected(this.value,6,5,7,0,2);storeVar(this.value, 2);" value="Weekly"id="6">
+            <input type="button" onclick="buttonSelected(this.value,7,6,5,0,2);storeVar(this.value, 2);" value="Monthly"id="7">
+        </div>
+        <br>
+        </div>
+
+
+        <!-- second question -->
+        <div class = "question">
+        <div>
+            <h3>How often do you take baths?</h3>
+            <input type="button" onclick="buttonSelected(this.value,8,9,10,11,3);storeVar(this.value, 3);" value="Everyday!" id="8">
+            <input type="button" onclick="buttonSelected(this.value,9,8,10,11,3);storeVar(this.value, 3);" value="Weekly" id="9">
+            <input type="button" onclick="buttonSelected(this.value,10,8,9,11,3);storeVar(this.value, 3);" value="Monthly" id="10">
+            <input type="button" onclick="buttonSelected(this.value,11,10,9,8,3);storeVar(this.value, 3);" value="Never" id="11">
+        </div>
+        <br>
+        </div>
+
+        <div class = "question">
+        <div>
+            <h3>How often do you use the toilet everyday?</h3>
+            <input type="number" oninput="storeVar(this.value, 4)">
+            <br>
+            <br>
+        </div>
+        </div>
+
+        <div class = "question">
+        <div>
+            <h3>How do you wash your dishes?</h3>
+            <h5>Dishwasher (loads per week)</h5>
+            <input type="number" oninput="storeVar(this.value, 5)" value="loads per day">
+            <h5>By Hand (loads per week)</h5>
+            <input type="number" oninput="storeVar(this.value, 6)" value="loads per day">
+            <br>
+        </div>
+        <br>
+        </div>
+
+        <div class = "question">
+        <div>
+            <h3>How do you wash your laundry?</h3>
+            <h5>Washing Machine (loads per week)</h5>
+            <input type="number" oninput="storeVar(this.value, 7)" value="loads per day">
+            <h5>By Hand (loads per week)</h5>
+            <input type="number" oninput="storeVar(this.value, 8)" value="loads per day">
+            <br>
+            <br>
+        </div>
+        </div>
+
+        <div class = "question">
+        <div>
+            <h3>Do you maintain a lawn?</h3>
+            <input type="button" onclick="buttonSelected(this.value,12,13,0,0,9);lawn(this.value);" value="Yes" id="12">
+            <input type="button" onclick="buttonSelected(this.value,13,12,0,0,9);lawn(this.value);lawnRemove()" value="No" id="13">
+            <br>
+            <br>
+        </div>
+
+        <div class="ghost" id="superman">
+            <h3>How big is your lawn?</h3>
+            <input type="button" onclick="buttonSelected(this.value,14,15,16,17,10);storeVar(this.value,10);" value="0-100 square feet" id="14">
+            <input type="button" onclick="buttonSelected(this.value,15,14,16,17,10);storeVar(this.value,10);" value="100-500 square feet" id="15">
+            <input type="button" onclick="buttonSelected(this.value,16,14,15,17,10);storeVar(this.value,10);" value="500-1000 square feet"id="16">
+            <input type="button" onclick="buttonSelected(this.value,17,14,15,16,10);storeVar(this.value,10);" value="> 1000 square feet"id="17">
+            <br>
+            <br>
+        </div>
+
+        </div>
+        
+        
+        <div class = "question">
+        <div>
+            <h3>Do you own a Car?</h3>
+            <input type="button" onclick="buttonSelected(this.value,18,19,0,0,11);hasCar(this.value);" value="Yes"id="18">
+            <input type="button" onclick="buttonSelected(this.value,19,18,0,0,11);hasCar(this.value);carRemove()" value="No"id="19">
+            <br>
+            <br>
+        </div>
+
+        <div class="ghost" id="superman2">
+            <h3>How far do you drive? (miles)</h3>
+            <input type="number" oninput="storeVar(this.value, 12)" value="miles">
+        </div>
+        <div class="ghost" id="superman3">
+            <h3>How often do you drive?</h3>
+            <input type="button" onclick="buttonSelected(this.value,20,21,22,0,13);storeVar(this.value, 13);" value="Daily"id="20">
+            <input type="button" onclick="buttonSelected(this.value,21,20,22,0,13);storeVar(this.value, 13);" value="Weekly"id="21">
+            <input type="button" onclick="buttonSelected(this.value,22,20,21,0,13);storeVar(this.value, 13);" value="Monthly"id="22">
+        </div>
+        <div class="ghost" id="superman4">
+            <h3>How do you wash your car?</h3>
+            <input type="button" onclick="buttonSelected(this.value,23,24,25,31,14);storeVar(this.value, 14);" value="At a self-serve car wash" id="23">
+            <input type ="button" onclick="buttonSelected(this.value,24,23,25,31,14);storeVar(this.value, 14);" value="At Home"id="24">
+            <input type="button" onclick="buttonSelected(this.value,25,23,24,31,14);storeVar(this.value, 14);" value="Using a drive through car wash"id="25">
+            <input type="button" onclick="buttonSelected(this.value,31,23,24,25,14);storeVar(this.value, 14);" value="Never"id="31">
+            <br>
+            <br>
+        </div>
+        <div class="ghost" id="superman5">
+            <h3>How often do you wash your car?</h3>
+            <input type="button" onclick="buttonSelected(this.value,32,33,34,35,18);storeVar(this.value, 18);" value="Daily" id="32">
+            <input type ="button" onclick="buttonSelected(this.value,33,32,34,35,18);storeVar(this.value, 18);" value="Weekly"id="33">
+            <input type="button" onclick="buttonSelected(this.value,34,32,33,35,18);storeVar(this.value, 18);" value="Biweekly"id="34">
+            <input type="button" onclick="buttonSelected(this.value,35,32,33,34,18);storeVar(this.value, 18);" value="Monthly"id="35">
+            <br>
+            <br>
+        </div>
+        
+        </div>
+
+        <div class = "question">
+        <div>
+            <h3>Where do you get your electricity from?</h3>
+            <input type="button" onclick="buttonSelected(this.value,26,27,0,0,15);storeVar(this.value, 15);" value="Solar Panels!" id="26">
+            <input type="button" onclick="buttonSelected(this.value,27,26,0,0,15);storeVar(this.value, 15);" value="From the electricity utility" id="27">
+            <br>
+            <br>
+        </div>
+        </div>
+        
+        <div class = "question">
+        <div>
+            <h3>How much do you shop?</h3>
+            <input type="button" onclick="buttonSelected(this.value,28,29,30,0,16);storeVar(this.value, 16);" value="Not a lot" id="28">
+            <input type="button" onclick="buttonSelected(this.value,29,28,30,0,16);storeVar(this.value, 16);" value="A normal amount" id="29">
+            <input type="button" onclick="buttonSelected(this.value,30,28,29,0,16);storeVar(this.value, 16);" value="Way too much" id="30">
+            <br>
+            <br>
+        </div>
+        </div>
+        
+        <div class = "question">
+        <div class="center">
+            <h3>What food do you eat on a typical day?</h3>
+						<h4>Click the images for each food</h4>
+            <input type="image" src="images/steak.jpg" onclick="storeFood(this.value,0,101)" width="48" height="48" value="steak" id = "101">
+            <input type="image" src="images/GrilledChicken.jpg" onclick="storeFood(this.value,1,102)" width="48" height="48" value="chicken" id = "102">
+            <input type="image" src="images/FriedEgg.jpg" onclick="storeFood(this.value,2,103)" width="48" height="48" value="egg" id ="103">
+            <input type="image" src="images/pork.jpg" onclick="storeFood(this.value,3,104)" width="48" height="48"value="pork" id ="104">
+            <input type="image" src="images/lentils.jpg" onclick="storeFood(this.value,4,105)" width="48" height="48" value="lentils" id ="105">
+            <input type="image" src="images/BeyondMeat.jpg" onclick="storeFood(this.value,5,106)" width="48" height="48" value="MeatlessPatty" id = "106">
+            <input type="image" src="images/spaghetti.jpg" onclick="storeFood(this.value,6,107)" width="48" height="48" value="spaghetti" id = "107">
+            <input type="image" src="images/potato.jpg" onclick="storeFood(this.value,7,108)" width="48" height="48" value="potato" id = "108">
+            <input type="image" src="images/rice.jpg" onclick="storeFood(this.value,8,109)" width="48" height="48" value="rice" id ="109">
+            <input type="image" src="images/blueberries.jpg" onclick="storeFood(this.value,9,110)" width="48" height="48" value="blueberries" id = "110">
+            <input type="image" src="images/banana.jpg" onclick="storeFood(this.value,10,111)" width="48" height="48" value="banana" id ="111">
+            <input type="image" src="images/apple.jpg" onclick="storeFood(this.value,11,112)" width="48" height="48" value="apple" id="112">
+            <input type="image" src="images/grapes.jpg" onclick="storeFood(this.value,12,113)" width="48" height="48" value="grapes" id ="113">
+            <input type="image" src="images/tomato.jpg" onclick="storeFood(this.value,13,114)" width="48" height="48" value="tomato" id="114">
+            <br>
+        </div>
+        <p>Beef Chicken Egg Pork Lentils Meatless Patty Spaghetti Potato Rice Blueberries Banana Apple Grapes Tomato</p>
+        </div>
+
+        <br>
+
+        <div class="center">
+            <input type="button" class = "bigButton" onclick=" findFood();submit();  addTips(); hideAll(); printArr(); updateText(); lowerHigherWater(); showerUsage(); bathUsage(); toiletUsage();dishesUsage(); clothesUsage(); lawnUsage(); gasolineUsage(); carWashUsage(); electricityUsage(); shoppingUsage(); foodUsage();" value="Submit" />
+        </div>
+    </div>
+    
+    <!-- everything here prints after the submit buttton makes everything dissapear -->
+		<!-- prints the paragraph with id totalgallons -->
+
+    <div class="ghost" id = "announcement">
+      <h2 id="resultAnnouncement">(THE RESULT ANNOUNCEMENT)</h2>
+    </div>
+  
+    <br>
+    <br>
+
+    <div class="ghost" id="stats">
+
+			<!-- prints the paragraph with id totalgallons -->
+        <p id="totalGallons"class = "StrongPara"></p>
+
+				<p id = "averageAmerican"class = "StrongPara">The average American uses on average 2220 gallons of water a day at home. See how you compare!</p>
+				<p class = "StrongPara">Here are your results:</p>
+
+				<p id = "showerWater" class = "NormPara"></p>
+				<p id = "bathWater" class = "NormPara"></p>
+				<p id = "toiletWater"class = "NormPara"></p>
+				<p id = "dishWater"class = "NormPara"></p>
+				<p id = "clothesWater"class = "NormPara"></p>
+				<p id = "lawnWater"class = "NormPara"></p>
+				<p id = "gasolineWater"class = "NormPara"></p>
+				<p id = "carWashWater"class = "NormPara"></p>
+				<p id = "electricityWater"class = "NormPara"></p>
+				<p id = "shoppingWater"class = "NormPara"></p>
+				<p id = "foodWater"class = "NormPara"></p>
+
+				<!-- back button -->
+        <input id="backButton" class="bigButton" type="button" onclick="returnAll();" value="Back" />
+        <br>
+        <br>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="footer">
+        <input class="wideButton" type="button" onclick="location.href='index.html';" value="Home" />
+        <input class="wideButton" type="button" onclick="location.href='facts.html';" value="Facts!" />
+
+    </div>
+</body>
+
+</html>
