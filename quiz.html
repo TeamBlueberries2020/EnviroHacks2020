@@ -2,33 +2,41 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css"/>
+	<link rel="stylesheet" type="text/css" href="style.css" />
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
-	<title>The Quiz</title>
+	<title>Calculator</title>
 	<link href="style.css" rel="stylesheet" type="text/css" />
+	<link rel="favicon icon" href="images/favicon.ico" type="image/x-icon">  
 </head>
 
 <body>
 
+
+
+
 	<div class="header">
-		<h1>The Quiz</h1>
-		<p>Track you water usage</p>
+		<h1 class = "titleText">The Water Footprint Calculator</h1>
+		<p class = "subtitle">Track your water usage</p>
 
-		<script src="script.js">
-
-		</script>
 	</div>
 
 	<script src="quiz.js">
 
 	</script>
-	<h3 class = "center">Take the water footprint quiz!</h3>
-	<input type="button" onclick="location.href='question1.html';" value="Start!" />
+	<div class="center">
+		<br>
+		<input class="bigButton" type="button" onclick="location.href='questions.html';" value="Start the Water Footprint Calculator!" />
+		<p class = "NormPara">This calculator shows your household's total water usage in comparasion with others! The calculator will present exactly which part of your lifestyle uses the most water and you can take action! Take the quiz and help us strive against climate change!</p>
+		<img class = "homeimage" src="images/waterusage.png" alt="Water Usage Pie Chart">
+    </div>
 
-
-  <div class="footer">
-  <input class = "wideButton" type="button" onclick="location.href='index.html';" value="Home"/>
+<div class="footer">
+        <input class="wideButton" type="button" onclick="location.href='index.html';" value="Home" />
+        <input class="wideButton" type="button" onclick="location.href='facts.html';" value="Fun Facts!" />
+    </div>
+    
 </body>
+
 
 </html>
